@@ -1,9 +1,13 @@
 # Node JS
 
 ## Command
+```
 node -v
-node -> process.env
+```
 
+```
+node process.env
+```
 
 ## Modules
 Standards (import)
@@ -34,4 +38,11 @@ npm i express —save-dev
 écrit dans “devDependencies”
 
 ## NPM uninstall “lodash”
+
+# express
+Getion des routes
+get|post|put|delete...
+
+router.get(/route) <-- static
+router.get(/:route) <-- dynamique
 
