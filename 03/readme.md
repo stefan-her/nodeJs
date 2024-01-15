@@ -1,4 +1,4 @@
-# Demo Express Web ApI
+# Demo Express Web API
 
 ## initialisation du projet
 
