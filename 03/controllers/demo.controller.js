@@ -21,5 +21,9 @@ export const getMessageByName = (req, res) => {
     })
 };
 
+export const getDanger = (req, res) => {
+    throw new Error("Boum....");
+};
+
 
 

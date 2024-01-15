@@ -5,7 +5,7 @@ import router from './routers/index.js';
 
 const app = express();
 
-const { PORT } =  process.env;
+const { PORT, NODE_ENV } =  process.env;
 
 
 app.use((req, res, next) => {
@@ -24,8 +24,26 @@ app.use((req, res, next) => {
 // Permet d'obtenir la bodu d'une requete 'application/json'
 app.use(express.json());
 
-
 app.use(router);
+
+app.use(function errorMiddleware(error, req, res, next) {
+
+    if(NODE_ENV === "dev") {
+        const objError = {
+            'message' : error.message,
+            'error' : error.stack
+        }
+
+        res.status(500).json(objError);
+        console.error(objError);
+        
+        return;
+    }
+    res.sendStatus(500);
+})
+
+
+
 
 app.listen(PORT, () => {
     console.log(`WEB API running on port ${PORT}`)
