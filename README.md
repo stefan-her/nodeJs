@@ -40,6 +40,19 @@ Ajout de “dependencies” dans package
 Création du fichier package-lock.json (gestion des conflits de version)
 référence l’ensemble des informations des packages avec les versions installées dans le projet
 
+### A partir de nodejs 20
+on peut ajouter le fichier environement lié
+
+```
+--env-file=.env
+```
+
+  "scripts": {
+    "start" : "node --env-file=.env app.js",
+    "dev" : "nodemon --env-file=.env app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
 ## npm i express —save
 écrit dans “dependencies”
 
@@ -61,3 +74,10 @@ router.get(/:route) <-- dynamique
 ## methode redirect
 Utilisation -> migration vers une nouvelle route v1 -> v2
 
+# Git
+
+install extension gitignore Extension for Visual Studio Code de CodeZombie
+Creation d'un fichier .gitignore déja configuré pour un projet (ici type nodeJs)
+
+ctrl+shift+p -> gitignore
+--> select type projet (node)
