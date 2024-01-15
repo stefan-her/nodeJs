@@ -58,3 +58,6 @@ get|post|put|delete...
 router.get(/route) <-- static
 router.get(/:route) <-- dynamique
 
+## methode redirect
+Utilisation -> migration vers une nouvelle route v1 -> v2
+
