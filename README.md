@@ -21,9 +21,17 @@ doit se terminer par module.exports = “module”
 # NPM
 
 ## Command
+```
 npm -v
+```
+
+```
 npm install package@version
+```
+
+```
 npm init
+```
 
 ## NPM install “lodash”
 Création du dossier node_modules 
@@ -34,7 +42,11 @@ référence l’ensemble des informations des packages avec les versions install
 
 ## npm i express —save
 écrit dans “dependencies”
+
+```
 npm i express —save-dev
+```
+
 écrit dans “devDependencies”
 
 ## NPM uninstall “lodash”
