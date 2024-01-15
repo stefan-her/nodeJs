@@ -1,21 +1,13 @@
-const demoController = require('./../controllers/demo.controller');
-const express = require('express');
-const demoRouter = express.Router();
+import { getMessage, getMessageById, getMessageByName } from './../controllers/demo.controller.js';
+import { Router } from 'express';
+const demoRouter = Router();
 
-// demoRouter.get('/', (req, res)  => {
-//     res.json({
-//         "message" : `Message -> ${MESSAGE}`
-//     });
-// });
 
-// router.get('/:id', (req, res)  => {
-//     res.json({
-//         "message" : `Message avec ${id} -> ${MESSAGE}`
-//     });
-// });
+// route avec middelware(s) avant l'execution de la methode lié  à la route
+// demoRouter.get('/', middelware(s), getMessage);
 
-demoRouter.get('/', demoController.getMessage);
-demoRouter.get('/:id([0-9]+)', demoController.getMessageById);
-demoRouter.get('/:name', demoController.getMessageByName);
+demoRouter.get('/', getMessage);
+demoRouter.get('/:id([0-9]+)', getMessageById);
+demoRouter.get('/:name', getMessageByName);
 
-module.exports = demoRouter;
+export default demoRouter;
