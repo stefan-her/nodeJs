@@ -74,10 +74,17 @@ router.get(/:route) <-- dynamique
 ## methode redirect
 Utilisation -> migration vers une nouvelle route v1 -> v2
 
-# Git
+#Extensions VS
 
-install extension gitignore Extension for Visual Studio Code de CodeZombie
+## Git
+
+Installation de l'extension gitignore Extension for Visual Studio Code de CodeZombie
 Creation d'un fichier .gitignore déja configuré pour un projet (ici type nodeJs)
 
 ctrl+shift+p -> gitignore
 --> select type projet (node)
+
+## Better Comments
+
+Colorisation des commantaires 
+valeur ! * ? //
