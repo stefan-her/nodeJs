@@ -3,6 +3,7 @@
 - sortie xml depuis nodeJs
 - Base de données vertorielle
 - Fourniseurs de support en nodeJs
+- Chat bot opensource qui lit nos pdf/word pour en faire des résumés a la demande via un combobox (parametrage propre) 
 
 
 # Node JS
