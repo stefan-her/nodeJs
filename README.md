@@ -1,3 +1,10 @@
+# Questions
+
+- sortie xml depuis nodeJs
+- Base de données vertorielle
+- Fourniseurs de support en nodeJs
+
+
 # Node JS
 
 ## Command
