@@ -1,6 +1,14 @@
 # Questions
 
 - sortie xml depuis nodeJs
+
+  **Envoi de donnnée vers** :
+  express xml parseur: xml body parser 
+  https://www.npmjs.com/package/body-parser-xml
+
+  **Réponse** :
+  https://www.npmjs.com/package/xml
+
 - Base de données vertorielle
 - Fourniseurs de support en nodeJs
 - Prorgamme opensource qui lit nos pdf/word pour en faire des résumés a la demande via un combobox (parametrage propre)
