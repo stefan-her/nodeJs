@@ -1,4 +1,4 @@
-# Demo web API exprss avec base de Données
+# Demo web API express avec base de Données
 
 Exemple d'api restfull avec base de donnée sqlite
 
@@ -11,15 +11,44 @@ npm i nodemon --save-dev
 
 ## Package à installer
 
+**Sequelize** est un ORM comme Eloquent sur Laravel  
+https://sequelize.org/
+
+
 Sqlite3
 
 ```
 npm i express sequelize sqlite3
 ```
+```
+// initialisation de Sequelize postgres
+const sequelize = new Sequelize((DB_USERNAME, DB_PASSWORD, DB_DATABASE), {
+    dialect: "sqlite",
+    storage: "/db/data.sqlite"
+});
+```
 
 Postgresql
 ```
 npm i express sequelize pg pg-hstore
+```
+
+### connexion à la base de données
+```
+db.sequelize.authenticate()
+    .then(() => {....})
+    .catch((error) => {...})
+```
+
+Dans le model
+
+```
+// initialisation de Sequelize postgres
+const sequelize = new Sequelize((DB_USERNAME, DB_PASSWORD, DB_DATABASE), {
+    host: DB_SERVER,
+    port: DB_PORT,
+    dialect: "postgres"
+});
 ```
 
 ## Ajout des middleweares 

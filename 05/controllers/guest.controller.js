@@ -1,9 +1,8 @@
-// import express from "express";
-// const { Request, Response } = express;
-
 const { Request, Response } = import("express");
+import GuestService from '../services/guest.services.js';
+const guestService = new GuestService();
 
-export default guestController = {
+export default {
 
     /**
      * Get guest information selected by id
@@ -19,8 +18,9 @@ export default guestController = {
      * @param { Request } req 
      * @param { Response } res 
      */
-    getAll: (req, res) => {
-        res.sendStatus(501);
+    getAll: async (req, res) => {
+        const data = await guestService.getAll();
+        res.status(200).json(data);
     },
 
     /**
@@ -28,8 +28,11 @@ export default guestController = {
      * @param { Request } req 
      * @param { Response } res 
      */
-    add: (req, res) => {
-        res.sendStatus(501);
+    add: async (req, res) => {
+        const data = await guestService.add(req.body)
+        res.status(201);
+        res.location('guest/' + data.id);
+        res.json(data);
     },
 
     /**

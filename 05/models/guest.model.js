@@ -1,8 +1,9 @@
-import{ BOOLEAN, DataType, Sequelize } from "sequelize";
+import{ DataTypes, Sequelize } from "sequelize";
+
 
 export default (sequelize) => {
     
-    const Guest = sequelize.define("Guest", {
+    return sequelize.define("Guest", {
         firstname: {
             type:DataTypes.STRING(50),
             allowNull: true
@@ -28,6 +29,4 @@ export default (sequelize) => {
             defaultValue: false
         }
     })
-
-
 };
