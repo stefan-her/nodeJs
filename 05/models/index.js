@@ -9,7 +9,9 @@ const sequelize = new Sequelize(DB_DATABASE, DB_USERNAME, DB_PASSWORD, {
     storage: "./db/data.sqlite"
 });
 
-export default {
-    sequelize: sequelize,
-    guest: guestModel(sequelize)
-};
+
+const db = {};
+db.sequelize = sequelize;
+db.Guest = guestModel(sequelize);
+
+export default db;

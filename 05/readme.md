@@ -32,6 +32,13 @@ Postgresql
 ```
 npm i express sequelize pg pg-hstore
 ```
+### Express et le async await
+
+Ajouter pour evité l'arrêt du serveur en car d'erreur
+
+```
+npm i express-async-errors
+```
 
 ### connexion à la base de données
 ```
@@ -104,4 +111,10 @@ Erreur - 404 not found
 Reponse - 204 Success  
 Erreur - 404 not found
 
+
+# Validation
+
+```
+npm i yup
+```
 

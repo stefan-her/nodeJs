@@ -9,8 +9,10 @@ export default {
      * @param { Request } req 
      * @param { Response } res 
      */
-    getById: (req, res) => {
-        res.sendStatus(501);
+    getById: async (req, res) => {
+        const data = await guestService.getById(req.params.id);
+        if(!data) return res.status(201);
+        res.status(200).json(data);
     },
 
     /**
@@ -40,8 +42,10 @@ export default {
      * @param { Request } req 
      * @param { Response } res 
      */
-    delete: (req, res) => {
-        res.sendStatus(501);
+    delete: async (req, res) => {
+        const done = await guestService.delete(req.params.id);
+        if(!done) return res.sendStatus(404);
+        res.status(200).json(204);
     },
 
     /**
@@ -49,7 +53,9 @@ export default {
      * @param { Request } req 
      * @param { Response } res 
      */
-    update: (req, res) => {
-        res.sendStatus(501);
+    update: async (req, res) => {
+        const [data] = await guestService.update(req.params, req.body)
+        if(!data)  return res.status(201);
+        res.status(200).json(data);
     },
 }
