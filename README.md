@@ -12,7 +12,7 @@
 - Base de données vertorielle
 - Fourniseurs de support en nodeJs
 - Prorgamme opensource qui lit nos pdf/word pour en faire des résumés a la demande via un combobox (parametrage propre)
-- Prorgamme de convertion d'une pharse (humaine) vers une requete sql
+- Prorgamme de convertion d'une phrase (humaine) vers une requete sql
 
 
 # Node JS
