@@ -101,6 +101,17 @@ npm run dev
 
 ---------------------------------
 
+## Les Fragments
+
+Afin de ne pas devoir englober les noeuds HTML de même niveau dans un element parent de type div nous pouvons les regrouper dans des fragments
+
+```
+<>
+    <div></div>
+    ....
+</>
+```
+
 ## Composant basé sur une function
 
 Un composant React est est une fonction qui renvoie un rendu "React" à l'aide du JSX
@@ -194,7 +205,7 @@ import clsx from 'clsx';
 
 Dans le component
 
-***Deux syntax possibles***
+**Deux syntax possibles**
 
 ```
 const clsWelcome = clsx('class1', gender === "M" && 'class2', 'my-class', firstname[0] === "A");
@@ -243,3 +254,38 @@ const SimpleList = function(props) {
     );
 }
 ```
+
+## Les événements du DOM
+
+Le JSX reprend les mêmes événements que l'HTML  
+preventDefaut() déactive le comportement par default de l'événement
+
+## Les Hooks
+
+Permet d'utiliser un état local, les cicles de vie
+Permet d'extraire le logique d'un composant et ainsi de la réutiliser
+
+utilisable dans deux cas depuis
+
+- fonctions composants React
+- Des Hooks personnalisés
+
+Appelle des Hooks uniquement au niveau du **Root** (racine)
+
+### State
+
+```
+import { useState } from "react";
+```
+
+Pour utiliser un Hook il faut appeler la méthode **useState** dans le **composant**.  
+
+```
+const DemoStateHook = function() {
+    const [value, setValue] = usetate(initiamValue);
+}
+````
+
+### SWR
+
+Bibliothèque de React Hooks pour la récupération de données et de mise en cache
