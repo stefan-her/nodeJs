@@ -82,7 +82,7 @@ Les fonctions
 ***basique*** limité à la génératin de rendu via le JSX   
 ***Avancé*** utilisation du mécanisme des Hooks
 
-## Creation d'un projet via Vite
+## Création d'un projet via Vite
 
 ```
 npm create vite@latest my-app
@@ -178,4 +178,68 @@ Dans le component
 
 ```
 <h1 className="style.title">Bonjour</h1>
+```
+
+## CSS conditionnel avec clsx
+
+```
+npm install --save clsx
+```
+
+importation
+
+```
+import clsx from 'clsx';
+```
+
+Dans le component
+
+***Deux syntax possibles***
+
+```
+const clsWelcome = clsx('class1', gender === "M" && 'class2', 'my-class', firstname[0] === "A");
+```
+
+```
+const clsWelcome = clsx({
+    class1: true,
+    class2: gender === "M",
+    'my-class' : true,
+    [style.demo] : firstname[0] === "A"
+});
+```
+
+```
+//----
+
+const clsWelcome = clsx({
+    [style.welcome]: true,
+    [style.welcomeM]: gender === "Y",
+    [style.welcomeF]: gender === "X"
+});
+
+<h1 className={clsWelcome}>Bonjour</h1>
+```
+
+## Commantaire dans JSX
+
+Les commantaires sont intégrés dans du JS grâce aux {}
+
+```
+{/* <p>Welcome on the first React project</p> */}
+```
+
+## Création de list
+
+```
+const SimpleList = function(props) {
+    const listItems => objs.maps((obj) => 
+        <li key={obj.key}>{obj.data}</li>
+
+    )
+
+    return (
+        <ul>{listItems}</ul>
+    );
+}
 ```

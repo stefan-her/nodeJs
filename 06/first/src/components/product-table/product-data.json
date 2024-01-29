@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "name": "Produit 1",
+      "desc": "Description du produit 1",
+      "price": 10.99,
+      "stock": true
+    },
+    {
+      "id": 2,
+      "name": "Produit 2",
+      "desc": "Description du produit 2",
+      "price": 5.99,
+      "stock": false
+    },
+    {
+      "id": 3,
+      "name": "Produit 3",
+      "desc": "Description du produit 3",
+      "price": 7.99,
+      "stock": true
+    }
+  ]
+  
+  

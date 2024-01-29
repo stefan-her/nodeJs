@@ -1,14 +1,13 @@
-import { useState } from 'react';
 import './App.css';
 import HelloWorld from './components/hello-world/hello-world';
-
+import ProductTable from './components/product-table/product-table';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
     <HelloWorld firstname='stefan' lastname='her' gender="Y" />
+    <ProductTable />
     </>
   )
 }
